@@ -66,7 +66,7 @@ function ProjectPage() {
             <div className="mt-2 text-xl">{project.client}</div>
             <div className="mt-8 text-xs uppercase tracking-[0.3em] text-muted-foreground">Stack</div>
             <div className="mt-3 flex flex-wrap gap-2">
-              {project.stack.map((s) => <span key={s} className="rounded-full border px-3 py-1 text-xs font-mono">{s}</span>)}
+              {project.stack.map((s: string) => <span key={s} className="rounded-full border px-3 py-1 text-xs font-mono">{s}</span>)}
             </div>
           </FadeUp>
         </div>
