@@ -40,23 +40,23 @@ export function LogoMark({ className = "" }: { className?: string }) {
       <motion.circle
         cx="200" cy="200" r="190"
         fill="none" stroke="currentColor" strokeWidth="2"
-        initial={{ pathLength: 0, opacity: 0 }}
-        animate={{ pathLength: 1, opacity: 1 }}
+        initial={{ pathLength: 0.001 }}
+        animate={{ pathLength: 1 }}
         transition={drawT(0)}
       />
       {/* Inner concentric rings */}
       <motion.circle
         cx="200" cy="200" r="150"
         fill="none" stroke="currentColor" strokeOpacity="0.25" strokeWidth="1"
-        initial={{ pathLength: 0, opacity: 0 }}
-        animate={{ pathLength: 1, opacity: 1 }}
+        initial={{ pathLength: 0.001 }}
+        animate={{ pathLength: 1 }}
         transition={drawT(0.2)}
       />
       <motion.circle
         cx="200" cy="200" r="110"
         fill="none" stroke="currentColor" strokeOpacity="0.15" strokeWidth="1"
-        initial={{ pathLength: 0, opacity: 0 }}
-        animate={{ pathLength: 1, opacity: 1 }}
+        initial={{ pathLength: 0.001 }}
+        animate={{ pathLength: 1 }}
         transition={drawT(0.35)}
       />
 
@@ -65,8 +65,8 @@ export function LogoMark({ className = "" }: { className?: string }) {
         d="M90 290 L90 110 L200 240 L310 110 L310 290"
         fill="none" stroke="currentColor" strokeWidth="10"
         strokeLinecap="round" strokeLinejoin="round"
-        initial={{ pathLength: 0, opacity: 0 }}
-        animate={{ pathLength: 1, opacity: 1 }}
+        initial={{ pathLength: 0.001 }}
+        animate={{ pathLength: 1 }}
         transition={drawT(0.5)}
       />
 
