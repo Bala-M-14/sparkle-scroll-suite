@@ -26,10 +26,6 @@ export function Logo({ className = "", size = 48 }: { className?: string; size?:
 }
 
 export function LogoMark({ className = "" }: { className?: string }) {
-  const drawT = (delay: number) => ({
-    pathLength: { duration: 1.6, ease: "easeInOut" as const, delay },
-    opacity: { duration: 0.3, delay },
-  });
   return (
     <svg
       viewBox="0 0 400 400"
@@ -40,34 +36,37 @@ export function LogoMark({ className = "" }: { className?: string }) {
       <motion.circle
         cx="200" cy="200" r="190"
         fill="none" stroke="currentColor" strokeWidth="2"
-        initial={{ pathLength: 0.001 }}
-        animate={{ pathLength: 1 }}
-        transition={drawT(0)}
+        initial={{ opacity: 0, scale: 0.85 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+        style={{ transformOrigin: "200px 200px", transformBox: "fill-box" }}
       />
       {/* Inner concentric rings */}
       <motion.circle
         cx="200" cy="200" r="150"
-        fill="none" stroke="currentColor" strokeOpacity="0.25" strokeWidth="1"
-        initial={{ pathLength: 0.001 }}
-        animate={{ pathLength: 1 }}
-        transition={drawT(0.2)}
+        fill="none" stroke="currentColor" strokeOpacity="0.3" strokeWidth="1"
+        initial={{ opacity: 0, scale: 0.7 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.2, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+        style={{ transformOrigin: "200px 200px", transformBox: "fill-box" }}
       />
       <motion.circle
         cx="200" cy="200" r="110"
-        fill="none" stroke="currentColor" strokeOpacity="0.15" strokeWidth="1"
-        initial={{ pathLength: 0.001 }}
-        animate={{ pathLength: 1 }}
-        transition={drawT(0.35)}
+        fill="none" stroke="currentColor" strokeOpacity="0.2" strokeWidth="1"
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.2, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+        style={{ transformOrigin: "200px 200px", transformBox: "fill-box" }}
       />
 
       {/* The "M" mark */}
       <motion.path
         d="M90 290 L90 110 L200 240 L310 110 L310 290"
-        fill="none" stroke="currentColor" strokeWidth="10"
+        fill="none" stroke="currentColor" strokeWidth="12"
         strokeLinecap="round" strokeLinejoin="round"
-        initial={{ pathLength: 0.001 }}
-        animate={{ pathLength: 1 }}
-        transition={drawT(0.5)}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
       />
 
       {/* Center dot */}
