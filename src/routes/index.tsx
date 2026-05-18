@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion, useScroll, useTransform, useMotionValue, useSpring } from "framer-motion";
 import { useRef, useEffect } from "react";
-import { RevealText, FadeUp } from "@/components/Reveal";
+import { FadeUp } from "@/components/Reveal";
 import { LogoMark } from "@/components/Logo";
 import { Marquee } from "@/components/Marquee";
 import { projects, services } from "@/data/projects";
