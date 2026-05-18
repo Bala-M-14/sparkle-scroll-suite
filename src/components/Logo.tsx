@@ -38,6 +38,10 @@ const draw = {
 };
 
 export function LogoMark({ className = "" }: { className?: string }) {
+  const drawT = (delay: number) => ({
+    pathLength: { duration: 1.6, ease: "easeInOut" as const, delay },
+    opacity: { duration: 0.3, delay },
+  });
   return (
     <svg
       viewBox="0 0 400 400"
@@ -48,18 +52,24 @@ export function LogoMark({ className = "" }: { className?: string }) {
       <motion.circle
         cx="200" cy="200" r="190"
         fill="none" stroke="currentColor" strokeWidth="2"
-        variants={draw} initial="hidden" animate="show" custom={0}
+        initial={{ pathLength: 0, opacity: 0 }}
+        animate={{ pathLength: 1, opacity: 1 }}
+        transition={drawT(0)}
       />
       {/* Inner concentric rings */}
       <motion.circle
         cx="200" cy="200" r="150"
         fill="none" stroke="currentColor" strokeOpacity="0.25" strokeWidth="1"
-        variants={draw} initial="hidden" animate="show" custom={1}
+        initial={{ pathLength: 0, opacity: 0 }}
+        animate={{ pathLength: 1, opacity: 1 }}
+        transition={drawT(0.2)}
       />
       <motion.circle
         cx="200" cy="200" r="110"
         fill="none" stroke="currentColor" strokeOpacity="0.15" strokeWidth="1"
-        variants={draw} initial="hidden" animate="show" custom={1.5}
+        initial={{ pathLength: 0, opacity: 0 }}
+        animate={{ pathLength: 1, opacity: 1 }}
+        transition={drawT(0.35)}
       />
 
       {/* The "M" mark */}
@@ -67,7 +77,9 @@ export function LogoMark({ className = "" }: { className?: string }) {
         d="M90 290 L90 110 L200 240 L310 110 L310 290"
         fill="none" stroke="currentColor" strokeWidth="10"
         strokeLinecap="round" strokeLinejoin="round"
-        variants={draw} initial="hidden" animate="show" custom={2}
+        initial={{ pathLength: 0, opacity: 0 }}
+        animate={{ pathLength: 1, opacity: 1 }}
+        transition={drawT(0.5)}
       />
 
       {/* Center dot */}
