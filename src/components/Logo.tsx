@@ -27,13 +27,7 @@ export function Logo({ className = "", size = 48 }: { className?: string; size?:
 
 export function LogoMark({ className = "" }: { className?: string }) {
   return (
-    <motion.div
-      className={className}
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-      style={{ position: "relative" }}
-    >
+    <div className={className} style={{ position: "relative" }}>
       <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" style={{ width: "100%", height: "100%", display: "block" }}>
         <circle cx="200" cy="200" r="190" fill="none" stroke="currentColor" strokeWidth="2" />
         <circle cx="200" cy="200" r="150" fill="none" stroke="currentColor" strokeOpacity="0.3" strokeWidth="1" />
