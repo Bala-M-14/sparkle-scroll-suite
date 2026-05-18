@@ -25,18 +25,6 @@ export function Logo({ className = "", size = 48 }: { className?: string; size?:
   );
 }
 
-const draw = {
-  hidden: { pathLength: 0, opacity: 0 },
-  show: (i: number) => ({
-    pathLength: 1,
-    opacity: 1,
-    transition: {
-      pathLength: { duration: 1.6, ease: "easeInOut" as const, delay: i * 0.18 },
-      opacity: { duration: 0.2, delay: i * 0.18 },
-    },
-  }),
-};
-
 export function LogoMark({ className = "" }: { className?: string }) {
   const drawT = (delay: number) => ({
     pathLength: { duration: 1.6, ease: "easeInOut" as const, delay },
