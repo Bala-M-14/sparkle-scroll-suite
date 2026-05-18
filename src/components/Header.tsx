@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Logo } from "@/components/Logo";
 
 const links = [
   { to: "/", label: "Index" },
@@ -21,12 +22,9 @@ export function Header() {
       className="fixed top-0 left-0 right-0 z-50"
     >
       <div className="mx-auto flex h-16 max-w-[1600px] items-center justify-between px-6 md:px-10">
-        <Link to="/" className="group flex items-center gap-2">
-          <span className="relative h-3 w-3">
-            <span className="absolute inset-0 rounded-full bg-primary" />
-            <span className="absolute inset-0 animate-ping rounded-full bg-primary opacity-60" />
-          </span>
-          <span className="h-display text-2xl tracking-tight">Morpheus</span>
+        <Link to="/" className="group flex items-center gap-2.5">
+          <Logo size={28} className="text-foreground transition group-hover:rotate-90 duration-500" />
+          <span className="h-display text-2xl tracking-tight leading-none">Morpheus</span>
           <span className="hidden md:inline text-[11px] uppercase tracking-[0.2em] text-muted-foreground translate-y-[1px]">
             ®
           </span>

@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion, useScroll, useTransform, useMotionValue, useSpring } from "framer-motion";
 import { useRef, useEffect } from "react";
-import { RevealText, FadeUp } from "@/components/Reveal";
+import { FadeUp } from "@/components/Reveal";
+import { LogoMark } from "@/components/Logo";
 import { Marquee } from "@/components/Marquee";
 import { projects, services } from "@/data/projects";
 
@@ -59,31 +60,32 @@ function Hero() {
         </div>
       </motion.div>
 
-      {/* Headline */}
-      <div className="relative mx-auto max-w-[1600px] px-6 pt-[10vh] md:px-12">
-        <h1 className="h-display text-[clamp(3.5rem,15vw,16rem)]">
-          <span className="block"><RevealText>where ideas</RevealText></span>
-          <span className="block"><RevealText delay={1}>become </RevealText><span className="h-display-italic text-primary"><RevealText delay={2}>shipped</RevealText></span></span>
-          <span className="block flex items-end gap-6"><RevealText delay={3}>product.</RevealText>
-            <motion.span
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 1.2, type: "spring" }}
-              className="hidden md:inline-block h-4 w-4 -translate-y-6 rounded-full bg-primary"
-            />
-          </span>
-        </h1>
+      {/* Logo + wordmark focal point */}
+      <div className="relative mx-auto flex max-w-[1600px] flex-col items-center px-6 pt-[6vh] md:px-12">
+        <LogoMark className="h-[44vh] w-[44vh] max-h-[440px] max-w-[440px] text-foreground" />
+
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.4, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-6 flex flex-col items-center"
+        >
+          <h1 className="h-display text-center text-[clamp(3rem,11vw,11rem)] leading-[0.9]">
+            Morpheus<span className="text-primary">.</span>
+          </h1>
+          <div className="mt-3 font-mono text-[11px] uppercase tracking-[0.4em] text-muted-foreground">
+            studio · est. 2024 · chennai
+          </div>
+        </motion.div>
       </div>
 
-      {/* Sub */}
-      <div className="mx-auto mt-10 grid max-w-[1600px] grid-cols-1 gap-10 px-6 md:grid-cols-12 md:px-12">
-        <FadeUp delay={0.5} className="md:col-span-5 md:col-start-7">
-          <p className="text-lg leading-relaxed text-foreground/80">
-            Morpheus is a three-person studio of engineers and designers, building
-            <span className="h-display-italic"> websites, startup MVPs</span>, and
-            <span className="h-display-italic"> final-year projects</span> that ship on time and look like nothing else on the timeline.
+      {/* Tagline + CTAs */}
+      <div className="mx-auto mt-12 grid max-w-[1100px] grid-cols-1 items-center gap-8 px-6 text-center md:px-12">
+        <FadeUp delay={0.4}>
+          <p className="mx-auto max-w-2xl text-lg leading-relaxed text-foreground/75">
+            A three-person studio building <span className="h-display-italic">websites, startup MVPs</span>, and <span className="h-display-italic">final-year projects</span> that ship on time and look like nothing else on the timeline.
           </p>
-          <div className="mt-8 flex flex-wrap items-center gap-3">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Link to="/work" className="group inline-flex items-center gap-3 rounded-full bg-ink px-6 py-3 text-sm font-medium text-background">
               See the work
               <span className="grid h-6 w-6 place-items-center rounded-full bg-background text-ink transition group-hover:rotate-45">→</span>
