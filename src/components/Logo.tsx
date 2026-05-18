@@ -31,7 +31,7 @@ const draw = {
     pathLength: 1,
     opacity: 1,
     transition: {
-      pathLength: { duration: 1.6, ease: [0.76, 0, 0.24, 1], delay: i * 0.18 },
+      pathLength: { duration: 1.6, ease: "easeInOut" as const, delay: i * 0.18 },
       opacity: { duration: 0.2, delay: i * 0.18 },
     },
   }),
