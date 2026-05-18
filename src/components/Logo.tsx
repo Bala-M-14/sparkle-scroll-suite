@@ -27,76 +27,60 @@ export function Logo({ className = "", size = 48 }: { className?: string; size?:
 
 export function LogoMark({ className = "" }: { className?: string }) {
   return (
-    <svg
-      viewBox="0 0 400 400"
-      xmlns="http://www.w3.org/2000/svg"
+    <motion.div
       className={className}
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+      style={{ position: "relative" }}
     >
-      {/* Outer ring */}
-      <motion.circle
-        cx="200" cy="200" r="190"
-        fill="none" stroke="currentColor" strokeWidth="2"
-        initial={{ opacity: 0, scale: 0.85 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-        style={{ transformOrigin: "200px 200px", transformBox: "fill-box" }}
-      />
-      {/* Inner concentric rings */}
-      <motion.circle
-        cx="200" cy="200" r="150"
-        fill="none" stroke="currentColor" strokeOpacity="0.3" strokeWidth="1"
-        initial={{ opacity: 0, scale: 0.7 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.2, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-        style={{ transformOrigin: "200px 200px", transformBox: "fill-box" }}
-      />
-      <motion.circle
-        cx="200" cy="200" r="110"
-        fill="none" stroke="currentColor" strokeOpacity="0.2" strokeWidth="1"
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.2, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-        style={{ transformOrigin: "200px 200px", transformBox: "fill-box" }}
-      />
+      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" style={{ width: "100%", height: "100%", display: "block" }}>
+        <circle cx="200" cy="200" r="190" fill="none" stroke="currentColor" strokeWidth="2" />
+        <circle cx="200" cy="200" r="150" fill="none" stroke="currentColor" strokeOpacity="0.3" strokeWidth="1" />
+        <circle cx="200" cy="200" r="110" fill="none" stroke="currentColor" strokeOpacity="0.2" strokeWidth="1" />
+        <path
+          d="M90 290 L90 110 L200 240 L310 110 L310 290"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="14"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <circle cx="200" cy="200" r="10" fill="oklch(0.66 0.24 5)" />
 
-      {/* The "M" mark */}
-      <motion.path
-        d="M90 290 L90 110 L200 240 L310 110 L310 290"
-        fill="none" stroke="currentColor" strokeWidth="12"
-        strokeLinecap="round" strokeLinejoin="round"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-      />
+        {/* Tick marks */}
+        {Array.from({ length: 12 }).map((_, i) => {
+          const angle = (i * 30 * Math.PI) / 180;
+          const x1 = 200 + Math.cos(angle) * 184;
+          const y1 = 200 + Math.sin(angle) * 184;
+          const x2 = 200 + Math.cos(angle) * 196;
+          const y2 = 200 + Math.sin(angle) * 196;
+          return <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke="currentColor" strokeOpacity="0.4" strokeWidth="1" />;
+        })}
+      </svg>
 
-      {/* Center dot */}
-      <motion.circle
-        cx="200" cy="200" r="10" fill="oklch(0.66 0.24 5)"
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ delay: 2.0, type: "spring", stiffness: 220, damping: 14 }}
-        style={{ transformOrigin: "200px 200px", transformBox: "fill-box" }}
-      />
-
-      {/* Slow rotating dial */}
-      <motion.g
+      {/* Rotating accent dial overlay */}
+      <motion.svg
+        viewBox="0 0 400 400"
+        xmlns="http://www.w3.org/2000/svg"
+        style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}
         animate={{ rotate: 360 }}
         transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-        style={{ transformOrigin: "200px 200px", transformBox: "fill-box" }}
       >
-        <circle cx="200" cy="20" r="4" fill="oklch(0.66 0.24 5)" />
-        <circle cx="200" cy="380" r="3" fill="currentColor" opacity="0.3" />
-      </motion.g>
+        <circle cx="200" cy="10" r="5" fill="oklch(0.66 0.24 5)" />
+        <circle cx="200" cy="390" r="3" fill="currentColor" opacity="0.3" />
+      </motion.svg>
 
-      {/* Orbiting accent ring */}
-      <motion.g
+      <motion.svg
+        viewBox="0 0 400 400"
+        xmlns="http://www.w3.org/2000/svg"
+        style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}
         animate={{ rotate: -360 }}
         transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-        style={{ transformOrigin: "200px 200px", transformBox: "fill-box" }}
       >
-        <circle cx="200" cy="50" r="2" fill="currentColor" opacity="0.4" />
-        <circle cx="350" cy="200" r="2" fill="currentColor" opacity="0.4" />
-      </motion.g>
-    </svg>
+        <circle cx="50" cy="200" r="2" fill="currentColor" opacity="0.5" />
+        <circle cx="350" cy="200" r="2" fill="currentColor" opacity="0.5" />
+      </motion.svg>
+    </motion.div>
   );
 }
