@@ -20,9 +20,6 @@ export const Route = createFileRoute("/")({
 function Hero() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
-  const y1 = useTransform(scrollYProgress, [0, 1], [0, -180]);
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, -320]);
-  const y3 = useTransform(scrollYProgress, [0, 1], [0, -90]);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   // Mouse parallax
@@ -53,7 +50,7 @@ function Hero() {
       />
 
       {/* Top meta */}
-      <motion.div style={{ y: y3, opacity }} className="mx-auto flex max-w-[1600px] items-start justify-between px-6 pt-12 md:px-12">
+      <motion.div style={{ opacity }} className="mx-auto flex max-w-[1600px] items-start justify-between px-6 pt-12 md:px-12">
         <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
           / Edition 26 · Chennai → Earth
         </div>
@@ -63,7 +60,7 @@ function Hero() {
       </motion.div>
 
       {/* Headline */}
-      <motion.div style={{ y: y1 }} className="relative mx-auto max-w-[1600px] px-6 pt-[10vh] md:px-12">
+      <div className="relative mx-auto max-w-[1600px] px-6 pt-[10vh] md:px-12">
         <h1 className="h-display text-[clamp(3.5rem,15vw,16rem)]">
           <span className="block"><RevealText>where ideas</RevealText></span>
           <span className="block"><RevealText delay={1}>become </RevealText><span className="h-display-italic text-primary"><RevealText delay={2}>shipped</RevealText></span></span>
@@ -76,10 +73,10 @@ function Hero() {
             />
           </span>
         </h1>
-      </motion.div>
+      </div>
 
       {/* Sub */}
-      <motion.div style={{ y: y2 }} className="mx-auto mt-10 grid max-w-[1600px] grid-cols-1 gap-10 px-6 md:grid-cols-12 md:px-12">
+      <div className="mx-auto mt-10 grid max-w-[1600px] grid-cols-1 gap-10 px-6 md:grid-cols-12 md:px-12">
         <FadeUp delay={0.5} className="md:col-span-5 md:col-start-7">
           <p className="text-lg leading-relaxed text-foreground/80">
             Morpheus is a three-person studio of engineers and designers, building
@@ -96,7 +93,7 @@ function Hero() {
             </Link>
           </div>
         </FadeUp>
-      </motion.div>
+      </div>
 
       {/* Scroll indicator */}
       <motion.div

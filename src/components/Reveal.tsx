@@ -16,8 +16,7 @@ export function RevealText({ children, className = "", delay = 0 }: { children: 
         className={`reveal-line ${className}`}
         variants={variants}
         initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, margin: "-10% 0px" }}
+        animate="show"
         custom={delay}
       >
         {children}
@@ -31,7 +30,7 @@ export function FadeUp({ children, delay = 0, className = "" }: { children: Reac
     <motion.div
       initial={{ opacity: 0, y: 32 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-10% 0px" }}
+      viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay }}
       className={className}
     >
