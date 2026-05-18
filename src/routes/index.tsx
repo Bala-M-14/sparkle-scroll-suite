@@ -79,7 +79,7 @@ function Hero() {
       </div>
 
       {/* Sub */}
-      <motion.div style={{ y: y2 }} className="mx-auto mt-10 grid max-w-[1600px] grid-cols-1 gap-10 px-6 md:grid-cols-12 md:px-12">
+      <div className="mx-auto mt-10 grid max-w-[1600px] grid-cols-1 gap-10 px-6 md:grid-cols-12 md:px-12">
         <FadeUp delay={0.5} className="md:col-span-5 md:col-start-7">
           <p className="text-lg leading-relaxed text-foreground/80">
             Morpheus is a three-person studio of engineers and designers, building
