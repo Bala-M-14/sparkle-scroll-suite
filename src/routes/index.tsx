@@ -76,7 +76,7 @@ function Hero() {
             />
           </span>
         </h1>
-      </motion.div>
+      </div>
 
       {/* Sub */}
       <motion.div style={{ y: y2 }} className="mx-auto mt-10 grid max-w-[1600px] grid-cols-1 gap-10 px-6 md:grid-cols-12 md:px-12">
