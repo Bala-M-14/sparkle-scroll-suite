@@ -75,6 +75,6 @@ export function LogoMark({ className = "" }: { className?: string }) {
         <circle cx="50" cy="200" r="2" fill="currentColor" opacity="0.5" />
         <circle cx="350" cy="200" r="2" fill="currentColor" opacity="0.5" />
       </motion.svg>
-    </motion.div>
+    </div>
   );
 }
