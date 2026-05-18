@@ -20,9 +20,6 @@ export const Route = createFileRoute("/")({
 function Hero() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
-  const y1 = useTransform(scrollYProgress, [0, 1], [0, -180]);
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, -320]);
-  const y3 = useTransform(scrollYProgress, [0, 1], [0, -90]);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   // Mouse parallax
