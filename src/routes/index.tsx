@@ -63,7 +63,7 @@ function Hero() {
       </motion.div>
 
       {/* Headline */}
-      <motion.div style={{ y: y1 }} className="relative mx-auto max-w-[1600px] px-6 pt-[10vh] md:px-12">
+      <div className="relative mx-auto max-w-[1600px] px-6 pt-[10vh] md:px-12">
         <h1 className="h-display text-[clamp(3.5rem,15vw,16rem)]">
           <span className="block"><RevealText>where ideas</RevealText></span>
           <span className="block"><RevealText delay={1}>become </RevealText><span className="h-display-italic text-primary"><RevealText delay={2}>shipped</RevealText></span></span>
