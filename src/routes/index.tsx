@@ -53,7 +53,7 @@ function Hero() {
       />
 
       {/* Top meta */}
-      <motion.div style={{ y: y3, opacity }} className="mx-auto flex max-w-[1600px] items-start justify-between px-6 pt-12 md:px-12">
+      <motion.div style={{ opacity }} className="mx-auto flex max-w-[1600px] items-start justify-between px-6 pt-12 md:px-12">
         <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
           / Edition 26 · Chennai → Earth
         </div>
