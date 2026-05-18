@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Logo } from "@/components/Logo";
 
 const links = [
   { to: "/", label: "Index" },
