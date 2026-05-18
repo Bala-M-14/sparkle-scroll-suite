@@ -96,7 +96,7 @@ function Hero() {
             </Link>
           </div>
         </FadeUp>
-      </motion.div>
+      </div>
 
       {/* Scroll indicator */}
       <motion.div
