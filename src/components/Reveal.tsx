@@ -16,8 +16,7 @@ export function RevealText({ children, className = "", delay = 0 }: { children: 
         className={`reveal-line ${className}`}
         variants={variants}
         initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.1 }}
+        animate="show"
         custom={delay}
       >
         {children}
