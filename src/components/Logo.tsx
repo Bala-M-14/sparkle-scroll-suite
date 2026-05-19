@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
-import logoImg from "@/assets/morpheus-logo.png";
+import { BrandMark } from "@/components/BrandMark";
 
 export function Logo({ className = "", size = 32 }: { className?: string; size?: number }) {
   return (
     <span
-      className={`inline-block overflow-hidden rounded-md ring-1 ring-foreground/10 ${className}`}
+      className={`inline-block overflow-hidden rounded-md ${className}`}
       style={{ width: size, height: size }}
     >
-      <img src={logoImg} alt="Morpheus" className="h-full w-full object-cover" />
+      <BrandMark className="h-full w-full" />
     </span>
   );
 }
