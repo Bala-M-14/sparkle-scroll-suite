@@ -39,7 +39,7 @@ function Hero() {
   }, [mx, my]);
 
   return (
-    <section ref={ref} className="relative overflow-hidden pt-24 pb-20 md:pt-28 md:pb-24">
+    <section ref={ref} className="relative min-h-[105vh] overflow-hidden">
       {/* Backdrop blobs */}
       <motion.div
         style={{ x: sx, y: sy }}
@@ -51,7 +51,7 @@ function Hero() {
       />
 
       {/* Top meta */}
-      <motion.div style={{ opacity }} className="mx-auto flex max-w-[1600px] items-start justify-between px-6 md:px-12">
+      <motion.div style={{ opacity }} className="mx-auto flex max-w-[1600px] items-start justify-between px-6 pt-12 md:px-12">
         <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
           / Edition 26 · Chennai → Earth
         </div>
@@ -61,23 +61,20 @@ function Hero() {
       </motion.div>
 
       {/* Logo + wordmark focal point */}
-      <div className="relative mx-auto flex max-w-[1600px] flex-col items-center px-6 pt-10 md:px-12 md:pt-14">
-        <LogoMark className="h-[300px] w-[300px] md:h-[380px] md:w-[380px] text-foreground" />
+      <div className="relative mx-auto flex max-w-[1600px] flex-col items-center px-6 pt-[6vh] md:px-12">
+        <LogoMark className="h-[44vh] w-[44vh] max-h-[440px] max-w-[440px] text-foreground" />
 
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-10 flex flex-col items-center"
+          transition={{ delay: 1.4, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-6 flex flex-col items-center"
         >
-          <h1 className="h-display text-center text-[clamp(2.75rem,9vw,8rem)] leading-[0.9]">
+          <h1 className="h-display text-center text-[clamp(3rem,11vw,11rem)] leading-[0.9]">
             Morpheus<span className="text-primary">.</span>
           </h1>
           <div className="mt-3 font-mono text-[11px] uppercase tracking-[0.4em] text-muted-foreground">
             studio · est. 2024 · chennai
-          </div>
-          <div className="mt-2 font-mono text-[11px] italic tracking-wide text-muted-foreground/80">
-            “Fitting for a digital reality”
           </div>
         </motion.div>
       </div>
@@ -99,6 +96,21 @@ function Hero() {
           </div>
         </FadeUp>
       </div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        style={{ opacity }}
+        className="pointer-events-none absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-muted-foreground"
+      >
+        <span>scroll</span>
+        <span className="block h-12 w-px overflow-hidden">
+          <motion.span
+            animate={{ y: ["-100%", "100%"] }}
+            transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+            className="block h-full w-full bg-foreground/40"
+          />
+        </span>
+      </motion.div>
     </section>
   );
 }
