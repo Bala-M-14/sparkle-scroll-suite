@@ -1,4 +1,5 @@
 import perimeteriqImg from "@/assets/perimeteriq.jpg";
+import lmszoneImg from "@/assets/lmszone.png";
 
 export type Project = {
   slug: string;
@@ -25,14 +26,15 @@ export const projects: Project[] = [
     image: perimeteriqImg,
   },
   {
-    slug: "lumen",
-    title: "Lumen — AI Resume Builder",
-    client: "Final Year · NIT",
+    slug: "lmszone",
+    title: "LMSZone — Full-Stack Learning Platform",
+    client: "EdTech / Independent",
     year: "2025",
-    tag: "AI Product",
-    stack: ["Next.js", "OpenAI", "Supabase"],
-    blurb: "NLP-driven resume tailoring that lands interviews. Ranked 1st in batch.",
-    palette: ["#0c2340", "#5cbdb9"],
+    tag: "Full-Stack SaaS",
+    stack: ["Next.js", "Supabase", "PostgreSQL", "Storage", "RBAC"],
+    blurb: "A complete LMS with auth, role-based access for students/instructors/admins, course storage, progress tracking and certificates.",
+    palette: ["#fff1e6", "#ff7a3d"],
+    image: lmszoneImg,
   },
   {
     slug: "harvest",
