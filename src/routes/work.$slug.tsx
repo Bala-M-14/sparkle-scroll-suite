@@ -46,7 +46,15 @@ function ProjectPage() {
           style={{ y, scale, background: `linear-gradient(135deg, ${project.palette[0]}, ${project.palette[1]})` }}
           className="absolute inset-0"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
+        {project.image && (
+          <motion.img
+            src={project.image}
+            alt={project.title}
+            style={{ y, scale }}
+            className="absolute inset-0 h-full w-full object-cover opacity-60 mix-blend-luminosity"
+          />
+        )}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-background" />
         <div className="relative z-10 mx-auto flex h-full max-w-[1600px] flex-col justify-end px-6 pb-20 md:px-12">
           <div className="flex items-center gap-4 text-xs uppercase tracking-[0.3em] text-white/70">
             <Link to="/work" className="story-link">← Work</Link>
