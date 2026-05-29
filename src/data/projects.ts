@@ -1,5 +1,6 @@
 import perimeteriqImg from "@/assets/perimeteriq.jpg";
 import lmszoneImg from "@/assets/lmszone.png";
+import flowgridImg from "@/assets/flowgrid.jpg";
 
 export type Project = {
   slug: string;
@@ -37,14 +38,15 @@ export const projects: Project[] = [
     image: lmszoneImg,
   },
   {
-    slug: "harvest",
-    title: "Harvest Commerce",
-    client: "Harvest & Co.",
+    slug: "flowgrid",
+    title: "FlowGrid — Signal-less Traffic Management",
+    client: "Smart City R&D",
     year: "2025",
-    tag: "Web Development",
-    stack: ["Astro", "Shopify", "Sanity"],
-    blurb: "A buttery-smooth storefront for a third-generation olive oil house.",
-    palette: ["#5c2018", "#e8b84a"],
+    tag: "AI + IoT + Web",
+    stack: ["NodeMCU", "ESP32", "Computer Vision", "WebSockets", "React"],
+    blurb: "A signal-less intersection controller — IR + vision sensors feed an AI scheduler that streams lane priorities to a live web dashboard in real time.",
+    palette: ["#0d0d10", "#ff3b30"],
+    image: flowgridImg,
   },
   {
     slug: "fold",
