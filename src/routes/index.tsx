@@ -83,7 +83,7 @@ function Hero() {
       <div className="mx-auto mt-12 grid max-w-[1100px] grid-cols-1 items-center gap-8 px-6 text-center md:px-12">
         <FadeUp delay={0.4}>
           <p className="mx-auto max-w-2xl text-lg leading-relaxed text-foreground/75">
-            A three-person studio building <span className="h-display-italic">websites, startup MVPs</span>, and <span className="h-display-italic">final-year projects</span> that ship on time and look like nothing else on the timeline.
+            An independent studio building <span className="h-display-italic">websites, startup MVPs</span>, and <span className="h-display-italic">final-year projects</span> that ship on time and look like nothing else on the timeline.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Link to="/work" className="group inline-flex items-center gap-3 rounded-full bg-ink px-6 py-3 text-sm font-medium text-background">
