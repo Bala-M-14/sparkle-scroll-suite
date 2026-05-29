@@ -1,4 +1,5 @@
 import perimeteriqImg from "@/assets/perimeteriq.jpg";
+import lmszoneImg from "@/assets/lmszone.png";
 
 export type Project = {
   slug: string;
