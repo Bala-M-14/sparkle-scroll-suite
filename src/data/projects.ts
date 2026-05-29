@@ -22,6 +22,7 @@ export const projects: Project[] = [
     stack: ["ESP32", "WebSockets", "TensorFlow", "React"],
     blurb: "Laser-grid perimeter sensors streaming over WebSockets to an AI classifier that flags real intrusions from noise in real time.",
     palette: ["#0a0a0a", "#ff2d6f"],
+    image: perimeteriqImg,
   },
   {
     slug: "lumen",
