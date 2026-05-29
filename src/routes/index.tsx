@@ -83,7 +83,7 @@ function Hero() {
       <div className="mx-auto mt-12 grid max-w-[1100px] grid-cols-1 items-center gap-8 px-6 text-center md:px-12">
         <FadeUp delay={0.4}>
           <p className="mx-auto max-w-2xl text-lg leading-relaxed text-foreground/75">
-            A three-person studio building <span className="h-display-italic">websites, startup MVPs</span>, and <span className="h-display-italic">final-year projects</span> that ship on time and look like nothing else on the timeline.
+            An independent studio building <span className="h-display-italic">websites, startup MVPs</span>, and <span className="h-display-italic">final-year projects</span> that ship on time and look like nothing else on the timeline.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Link to="/work" className="group inline-flex items-center gap-3 rounded-full bg-ink px-6 py-3 text-sm font-medium text-background">
@@ -214,7 +214,7 @@ function Pillars() {
       <div className="mx-auto max-w-[1600px] px-6 md:px-12">
         <div className="text-xs uppercase tracking-[0.3em] text-background/50">/ The studio</div>
         <h2 className="h-display mt-6 text-[clamp(2.5rem,8vw,7rem)] leading-[0.95]">
-          Three people.<br />
+          One studio.<br />
           <span className="h-display-italic text-primary">One obsession.</span>
         </h2>
 
@@ -253,7 +253,7 @@ function HorizontalProcess() {
 
   const steps = [
     { n: "01", t: "Listen", d: "We dig into the actual problem before sketching pixels." },
-    { n: "02", t: "Sketch", d: "Three directions, one whiteboard, no marketing fluff." },
+    { n: "02", t: "Sketch", d: "Multiple directions, one whiteboard, no marketing fluff." },
     { n: "03", t: "Build", d: "Weekly demos. You see progress, not Gantt charts." },
     { n: "04", t: "Polish", d: "Motion, microcopy, and the 1% that makes the 99% sing." },
     { n: "05", t: "Ship", d: "Launch playbook, monitoring, and a celebration dinner." },
