@@ -1,3 +1,5 @@
+import perimeteriqImg from "@/assets/perimeteriq.jpg";
+
 export type Project = {
   slug: string;
   title: string;
@@ -7,6 +9,7 @@ export type Project = {
   stack: string[];
   blurb: string;
   palette: [string, string];
+  image?: string;
 };
 
 export const projects: Project[] = [
