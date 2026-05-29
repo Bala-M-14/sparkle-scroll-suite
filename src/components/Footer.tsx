@@ -40,7 +40,7 @@ export function Footer() {
               <div className="mt-4 space-y-2 text-sm">
                 <Link to="/work" className="block story-link">Work</Link>
                 <Link to="/services" className="block story-link">Services</Link>
-                <Link to="/team" className="block story-link">Team</Link>
+                <Link to="/team" className="block story-link">Process</Link>
               </div>
             </div>
             <div>
