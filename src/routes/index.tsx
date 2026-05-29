@@ -253,7 +253,7 @@ function HorizontalProcess() {
 
   const steps = [
     { n: "01", t: "Listen", d: "We dig into the actual problem before sketching pixels." },
-    { n: "02", t: "Sketch", d: "Three directions, one whiteboard, no marketing fluff." },
+    { n: "02", t: "Sketch", d: "Multiple directions, one whiteboard, no marketing fluff." },
     { n: "03", t: "Build", d: "Weekly demos. You see progress, not Gantt charts." },
     { n: "04", t: "Polish", d: "Motion, microcopy, and the 1% that makes the 99% sing." },
     { n: "05", t: "Ship", d: "Launch playbook, monitoring, and a celebration dinner." },
