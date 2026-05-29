@@ -214,7 +214,7 @@ function Pillars() {
       <div className="mx-auto max-w-[1600px] px-6 md:px-12">
         <div className="text-xs uppercase tracking-[0.3em] text-background/50">/ The studio</div>
         <h2 className="h-display mt-6 text-[clamp(2.5rem,8vw,7rem)] leading-[0.95]">
-          Three people.<br />
+          One studio.<br />
           <span className="h-display-italic text-primary">One obsession.</span>
         </h2>
 
