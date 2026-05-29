@@ -11,14 +11,14 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "atlas",
-    title: "Atlas SaaS Dashboard",
-    client: "Atlas Labs",
+    slug: "perimeteriq",
+    title: "PerimeterIQ — AI Intrusion Detection",
+    client: "Research / IoT Lab",
     year: "2026",
-    tag: "Startup MVP",
-    stack: ["Next.js", "tRPC", "PostgreSQL"],
-    blurb: "An analytics command center for early-stage fintech ops. Shipped in 6 weeks.",
-    palette: ["#1a1a1a", "#ea4c89"],
+    tag: "AI + IoT",
+    stack: ["ESP32", "WebSockets", "TensorFlow", "React"],
+    blurb: "Laser-grid perimeter sensors streaming over WebSockets to an AI classifier that flags real intrusions from noise in real time.",
+    palette: ["#0a0a0a", "#ff2d6f"],
   },
   {
     slug: "lumen",
