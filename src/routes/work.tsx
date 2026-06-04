@@ -78,20 +78,28 @@ function WorkCard({ project, index }: { project: typeof projects[number]; index:
       params={{ slug: project.slug }}
       className={`group block ${index % 2 === 1 ? "md:mt-24" : ""}`}
     >
-      <motion.div style={{ y }} className="relative aspect-[5/4] overflow-hidden rounded-3xl"
+      <motion.div style={{ y }} className="relative aspect-[5/4] w-full overflow-hidden rounded-3xl"
         whileHover={{ scale: 1.01 }}
         transition={{ duration: 0.4 }}
       >
         <div className="absolute inset-0" style={{ background: `linear-gradient(135deg, ${project.palette[0]}, ${project.palette[1]})` }} />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.25),transparent_60%)]" />
+        {project.image && (
+          <img
+            src={project.image}
+            alt={project.title}
+            loading="lazy"
+            className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+          />
+        )}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
         <div className="absolute inset-0 flex flex-col justify-between p-8">
-          <div className="flex items-start justify-between text-xs uppercase tracking-[0.25em] text-white/70">
+          <div className="flex items-start justify-between text-xs uppercase tracking-[0.25em] text-white/80">
             <span>{project.tag}</span>
             <span>{project.year}</span>
           </div>
           <div>
             <div className="h-display text-3xl text-white md:text-4xl">{project.title}</div>
-            <div className="mt-3 text-sm text-white/70">{project.client}</div>
+            <div className="mt-3 text-sm text-white/80">{project.client}</div>
           </div>
         </div>
         <motion.span className="absolute right-6 top-6 grid h-12 w-12 place-items-center rounded-full bg-white text-ink opacity-0 transition group-hover:opacity-100">↗</motion.span>
