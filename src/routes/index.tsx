@@ -170,10 +170,18 @@ function ProjectRow({ project, index }: { project: typeof projects[number]; inde
             className="group relative aspect-[16/10] w-full overflow-hidden rounded-3xl"
             style={{ background: `linear-gradient(135deg, ${project.palette[0]}, ${project.palette[1]})` }}
           >
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.25),transparent_50%)]" />
+            {project.image && (
+              <img
+                src={project.image}
+                alt={project.title}
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+              />
+            )}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
             <div className="absolute inset-0 flex items-end p-8">
               <div className="w-full">
-                <div className="flex items-center justify-between text-xs uppercase tracking-[0.25em] text-white/70">
+                <div className="flex items-center justify-between text-xs uppercase tracking-[0.25em] text-white/80">
                   <span>{project.tag}</span>
                   <span>{project.year}</span>
                 </div>
