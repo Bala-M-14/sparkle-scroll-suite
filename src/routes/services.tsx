@@ -19,10 +19,10 @@ function ServicesPage() {
   return (
     <>
       <section className="mx-auto max-w-[1600px] px-6 pt-24 pb-20 md:px-12">
-        <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground">/ Services</div>
+        <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground">/ Services · {services.length} ways to work</div>
         <h1 className="h-display mt-6 text-[clamp(3rem,12vw,13rem)]">
-          <span className="block"><RevealText>four ways</RevealText></span>
-          <span className="block"><RevealText delay={1}>to </RevealText><span className="h-display-italic text-primary"><RevealText delay={2}>work</RevealText></span> <RevealText delay={3}>together.</RevealText></span>
+          <span className="block"><RevealText>build,</RevealText></span>
+          <span className="block"><RevealText delay={1}>automate &amp; </RevealText><span className="h-display-italic text-primary"><RevealText delay={2}>grow.</RevealText></span></span>
         </h1>
       </section>
 
