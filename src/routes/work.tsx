@@ -15,7 +15,7 @@ export const Route = createFileRoute("/work")({
   component: WorkPage,
 });
 
-const filters = ["All", "Startup MVP", "Web Development", "AI Product", "Product Design", "Open Source", "Brand + Web", "Final Year Project"] as const;
+const filters = ["All", "Business Website", "College / Club Website", "AI Product", "AI Automation", "Brand + Web"] as const;
 
 function WorkPage() {
   const [active, setActive] = useState<typeof filters[number]>("All");
