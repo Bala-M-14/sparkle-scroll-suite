@@ -227,7 +227,7 @@ function Pillars() {
         </h2>
 
         <div className="mt-20 grid gap-x-12 gap-y-16 md:grid-cols-3">
-          {services.map((s, i) => (
+          {services.slice(0, 6).map((s, i) => (
             <FadeUp key={s.code} delay={i * 0.08}>
               <div className="flex items-baseline justify-between border-b border-background/15 pb-3">
                 <span className="font-mono text-xs text-background/50">/{s.code}</span>
