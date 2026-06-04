@@ -19,18 +19,17 @@ export function Footer() {
           </h2>
 
           <div className="mt-12 flex flex-wrap items-center justify-between gap-6">
-            <Link
-              to="/contact"
+            <a
+              href="mailto:buildwithmorpheus@gmail.com"
               className="group inline-flex items-center gap-4 rounded-full border border-background/20 px-7 py-4 text-base font-medium transition hover:bg-primary hover:border-primary"
             >
-              hello@morpheus.studio
+              buildwithmorpheus@gmail.com
               <span className="grid h-8 w-8 place-items-center rounded-full bg-background text-ink transition group-hover:rotate-45">→</span>
-            </Link>
+            </a>
             <div className="flex gap-6 text-sm text-background/60">
-              <a href="#" className="story-link">Twitter</a>
-              <a href="#" className="story-link">Dribbble</a>
-              <a href="#" className="story-link">GitHub</a>
-              <a href="#" className="story-link">LinkedIn</a>
+              <a href="https://wa.me/916374516051" className="story-link">WhatsApp</a>
+              <a href="https://instagram.com" className="story-link">Instagram</a>
+              <a href="https://morpheus.in" className="story-link">morpheus.in</a>
             </div>
           </div>
 
@@ -44,16 +43,17 @@ export function Footer() {
               </div>
             </div>
             <div>
-              <div className="text-xs uppercase tracking-[0.25em] text-background/40">Office</div>
+              <div className="text-xs uppercase tracking-[0.25em] text-background/40">Contact</div>
               <div className="mt-4 text-sm leading-relaxed text-background/70">
-                Chennai, IN<br />
-                Remote, Earth
+                +91 63745 16051<br />
+                buildwithmorpheus@gmail.com<br />
+                morpheus.in
               </div>
             </div>
             <div>
               <div className="text-xs uppercase tracking-[0.25em] text-background/40">Hours</div>
               <div className="mt-4 text-sm text-background/70">
-                Mon–Fri · 9–7 IST<br />
+                Mon–Sat · 10–8 IST<br />
                 Replies in ~24h
               </div>
             </div>

@@ -13,8 +13,8 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
 });
 
-const intents = ["Web platform", "Startup MVP", "Final-year project", "Brand × Motion", "Something else"] as const;
-const budgets = ["< ₹50k", "₹50k–2L", "₹2–5L", "₹5L+"] as const;
+const intents = ["Business website", "College / Club website", "Final-year project", "Chatbot / WhatsApp bot", "Logo + brand kit", "Something else"] as const;
+const budgets = ["< ₹5k", "₹5k–15k", "₹15k–50k", "₹50k+"] as const;
 
 function ContactPage() {
   const [intent, setIntent] = useState<typeof intents[number]>(intents[0]);
@@ -36,10 +36,10 @@ function ContactPage() {
           <h2 className="h-display text-3xl">Or just say hi.</h2>
           <p className="mt-4 text-foreground/70">We read every message. Be specific — links, screenshots, even voice notes work.</p>
           <div className="mt-10 space-y-6">
-            <Detail label="Email" value="hello@morpheus.studio" href="mailto:hello@morpheus.studio" />
-            <Detail label="Telegram" value="@morpheusstudio" href="#" />
-            <Detail label="Calendar" value="cal.com/morpheus" href="#" />
-            <Detail label="Office" value="Chennai · IST" />
+            <Detail label="Email" value="buildwithmorpheus@gmail.com" href="mailto:buildwithmorpheus@gmail.com" />
+            <Detail label="WhatsApp" value="+91 63745 16051" href="https://wa.me/916374516051" />
+            <Detail label="Website" value="morpheus.in" href="https://morpheus.in" />
+            <Detail label="Studio" value="Chennai · IST" />
           </div>
 
           <div className="mt-12 rounded-2xl border bg-card p-6">
